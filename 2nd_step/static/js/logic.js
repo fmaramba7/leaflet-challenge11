@@ -3,9 +3,9 @@ const earthquakesUrl = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summar
 
 const tectonicUrl = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
 
-// Creating markers and popups
+// Creating markers & popups
 const createMarkers = ((data) => {
-    // Creating layer for earthquakes
+    // Create layer for earthquakes
     let earthquakes = L.geoJSON(data, {
         // use pointToLayer to create circle markers
         pointToLayer: function(feature, latlng) {
@@ -35,7 +35,7 @@ const createMarkers = ((data) => {
             color: "#fda101"
         });
 
-        // calling createMap function with earthquakes and faultLines layers
+        // call createMap function with earthquakes and faultLines layers
         createMap(earthquakes, faultLines);
     });
 });

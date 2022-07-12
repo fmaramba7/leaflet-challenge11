@@ -64,7 +64,7 @@ const getSize = ((magnitude) => {
     return magnitude * 5;
 });
 
-// Define a color based on the magnitude of earthquake
+// Defining a color based on the magnitude of earthquakes
 const getColor = ((magnitude)=>  {
     switch (true) {
         case (magnitude > 5):
@@ -82,7 +82,7 @@ const getColor = ((magnitude)=>  {
     }
 });
 
-// Calling the USGS earthquakes API 
+// Call the USGS earthquakes API 
 d3.json(url).then(function(response) {
     //console.log(response);
     // Map creation
